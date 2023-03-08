@@ -1,0 +1,25 @@
+{
+   "name": "docker-demo",
+   "description": "Demonstrate a basic Hello World application",
+   "version": "0.0.1",
+    "scripts": {
+        "start": "node app.js",
+        "lint": "eslint",
+        "format": "prettier --single-quote --write *.js",
+        "docker-build": "docker build --tag node-docker .",
+        "docker-run": "docker run --init -p 8080:8080 --name node-docker-demo node-docker",
+        "docker-stop": "docker container stop"
+    },
+    "devDependencies": {
+        "eslint": "^7.5.0",
+        "prettier": "^2.0.5"
+      },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+}
